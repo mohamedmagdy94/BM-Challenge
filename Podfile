@@ -9,6 +9,7 @@ target 'Challenge' do
   pod 'Moya/RxSwift', '14.0.0'
   pod 'R.swift'
   pod "SwiftyMocky"
+  pod 'RxOptional'
   # Pods for Challenge
 
   target 'ChallengeTests' do
