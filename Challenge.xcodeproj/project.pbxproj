@@ -29,6 +29,7 @@
 		D9B725DF27A16EC6005D887F /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725DE27A16EC5005D887F /* AddIngredientsViewController.swift */; };
 		D9B725E127A19596005D887F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E027A19596005D887F /* R.generated.swift */; };
 		D9B725E427A1A237005D887F /* AddIngredientsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */; };
+		D9B725E627A1A3CA005D887F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E527A1A3CA005D887F /* AppCoordinator.swift */; };
 		E746B0993CF4340DBCA804F3 /* Pods_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DF58EA664B9209486646C /* Pods_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		D9B725DE27A16EC5005D887F /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
 		D9B725E027A19596005D887F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsConfigurator.swift; sourceTree = "<group>"; };
+		D9B725E527A1A3CA005D887F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				D9B725D327A16B27005D887F /* Coordinating.swift */,
+				D9B725E527A1A3CA005D887F /* AppCoordinator.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				D9B725D127A15EA5005D887F /* AddIngredientViewModel.swift in Sources */,
 				D99E79E3279DD1EB00FA5010 /* ExtractIngredients.swift in Sources */,
 				D99E79E0279DCF1700FA5010 /* Ingredient.swift in Sources */,
+				D9B725E627A1A3CA005D887F /* AppCoordinator.swift in Sources */,
 				D99E79AC279DBEF400FA5010 /* Challenge.xcdatamodeld in Sources */,
 				D9B725E427A1A237005D887F /* AddIngredientsConfigurator.swift in Sources */,
 				D99E79A2279DBEF400FA5010 /* AppDelegate.swift in Sources */,
