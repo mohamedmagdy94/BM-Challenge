@@ -22,12 +22,14 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E7Z-az-5le">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="632"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="user_input_text_view"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-ab-TTe">
                                         <rect key="frame" x="0.0" y="696" width="366" height="42"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="analyze_button"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="NTJ-K5-i3h"/>
                                         </constraints>

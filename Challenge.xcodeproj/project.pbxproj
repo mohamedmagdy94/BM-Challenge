@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23925E6AB0A1A8808431DFF3 /* Pods_Challenge_ChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362A5BC53C5CC9DD3ADAF221 /* Pods_Challenge_ChallengeUITests.framework */; };
 		2C81C93A899B13B05B9D8F91 /* Pods_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA01E6AFB78FB65B6C26616 /* Pods_Challenge.framework */; };
+		D96325C027A1BF4A00524A1D /* ExtractIngredientsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96325BF27A1BF4A00524A1D /* ExtractIngredientsTests.swift */; };
 		D99E79A2279DBEF400FA5010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79A1279DBEF400FA5010 /* AppDelegate.swift */; };
 		D99E79A4279DBEF400FA5010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79A3279DBEF400FA5010 /* SceneDelegate.swift */; };
 		D99E79A6279DBEF400FA5010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79A5279DBEF400FA5010 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		D9B725E127A19596005D887F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E027A19596005D887F /* R.generated.swift */; };
 		D9B725E427A1A237005D887F /* AddIngredientsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */; };
 		D9B725E627A1A3CA005D887F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E527A1A3CA005D887F /* AppCoordinator.swift */; };
+		D9B725E827A1AB50005D887F /* AddIngredientsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E727A1AB50005D887F /* AddIngredientsUITests.swift */; };
 		E746B0993CF4340DBCA804F3 /* Pods_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DF58EA664B9209486646C /* Pods_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,7 @@
 		8D2256A86F4C72C9F6E6990F /* Pods-Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.release.xcconfig"; path = "Target Support Files/Pods-Challenge/Pods-Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		A2B7A62351404B41E7C4DF56 /* Pods-Challenge-ChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-ChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-Challenge-ChallengeUITests/Pods-Challenge-ChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A74DCCB82D16DCB1351F66EA /* Pods-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.debug.xcconfig"; path = "Target Support Files/Pods-Challenge/Pods-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D96325BF27A1BF4A00524A1D /* ExtractIngredientsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractIngredientsTests.swift; sourceTree = "<group>"; };
 		D99E799E279DBEF400FA5010 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99E79A1279DBEF400FA5010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D99E79A3279DBEF400FA5010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		D9B725E027A19596005D887F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsConfigurator.swift; sourceTree = "<group>"; };
 		D9B725E527A1A3CA005D887F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D9B725E727A1AB50005D887F /* AddIngredientsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				D99E79BB279DBEF700FA5010 /* ChallengeTests.swift */,
+				D96325BF27A1BF4A00524A1D /* ExtractIngredientsTests.swift */,
 			);
 			path = ChallengeTests;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			children = (
 				D99E79C5279DBEF700FA5010 /* ChallengeUITests.swift */,
 				D99E79C7279DBEF700FA5010 /* ChallengeUITestsLaunchTests.swift */,
+				D9B725E727A1AB50005D887F /* AddIngredientsUITests.swift */,
 			);
 			path = ChallengeUITests;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D96325C027A1BF4A00524A1D /* ExtractIngredientsTests.swift in Sources */,
 				D99E79BC279DBEF700FA5010 /* ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D99E79C8279DBEF700FA5010 /* ChallengeUITestsLaunchTests.swift in Sources */,
+				D9B725E827A1AB50005D887F /* AddIngredientsUITests.swift in Sources */,
 				D99E79C6279DBEF700FA5010 /* ChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
