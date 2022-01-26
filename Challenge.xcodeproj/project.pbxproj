@@ -28,6 +28,7 @@
 		D9B725DB27A16E68005D887F /* Ingredients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B725DA27A16E68005D887F /* Ingredients.storyboard */; };
 		D9B725DF27A16EC6005D887F /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725DE27A16EC5005D887F /* AddIngredientsViewController.swift */; };
 		D9B725E127A19596005D887F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E027A19596005D887F /* R.generated.swift */; };
+		D9B725E427A1A237005D887F /* AddIngredientsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */; };
 		E746B0993CF4340DBCA804F3 /* Pods_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DF58EA664B9209486646C /* Pods_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		D9B725DA27A16E68005D887F /* Ingredients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ingredients.storyboard; sourceTree = "<group>"; };
 		D9B725DE27A16EC5005D887F /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
 		D9B725E027A19596005D887F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		D99E79D9279DCCD200FA5010 /* Ingredients */ = {
 			isa = PBXGroup;
 			children = (
+				D9B725E227A1A21F005D887F /* DI */,
 				D9B725D927A16E08005D887F /* View */,
 				D9B725CE27A15E7D005D887F /* Presentation */,
 				D99E79DA279DCD1C00FA5010 /* Domain */,
@@ -307,6 +310,14 @@
 				D9B725DE27A16EC5005D887F /* AddIngredientsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9B725E227A1A21F005D887F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D9B725E327A1A237005D887F /* AddIngredientsConfigurator.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,6 +607,7 @@
 				D99E79E3279DD1EB00FA5010 /* ExtractIngredients.swift in Sources */,
 				D99E79E0279DCF1700FA5010 /* Ingredient.swift in Sources */,
 				D99E79AC279DBEF400FA5010 /* Challenge.xcdatamodeld in Sources */,
+				D9B725E427A1A237005D887F /* AddIngredientsConfigurator.swift in Sources */,
 				D99E79A2279DBEF400FA5010 /* AppDelegate.swift in Sources */,
 				D9B725DF27A16EC6005D887F /* AddIngredientsViewController.swift in Sources */,
 				D9B725D727A16B59005D887F /* AddIngredientsCoordinator.swift in Sources */,

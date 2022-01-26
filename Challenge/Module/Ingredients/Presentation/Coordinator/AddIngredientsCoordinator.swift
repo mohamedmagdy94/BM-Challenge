@@ -24,7 +24,9 @@ class AddIngredientsCoordinator: AddIngredientsCoordinating{
     func start() {
         let storyboard = R.storyboard.ingredients
         guard let view = storyboard.addIngredientsViewController() else{ return }
-        navigationContoller.pushViewController(view, animated: true)
+        let configurator = AddIngredientsConfigurator()
+        let configuredView = configurator.configure(coordinator: self, view: view)
+        navigationContoller.pushViewController(configuredView, animated: true)
     }
     
     func analyzeText(with service: ExtractingIngredients) {
