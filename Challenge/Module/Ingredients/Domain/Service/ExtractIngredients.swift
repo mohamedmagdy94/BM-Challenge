@@ -12,7 +12,7 @@ protocol ExtractingIngredients{
     func extractIngredients(userInput: String)->[Ingredient]
 }
 
-struct ExtractIngredients: ExtractingIngredients{
+class ExtractIngredients: ExtractingIngredients{
     
     var ingredientsDelimeter: String
     var ingredientDelimeter: String
@@ -27,8 +27,10 @@ struct ExtractIngredients: ExtractingIngredients{
     }
     
     func extractIngredients(userInput: String) -> [Ingredient] {
+        self.userInput = userInput
         let ingredients = splitIngredientsInStrings()
             .compactMap(mapStringToIngredient)
+        self.ingredients = ingredients
         return ingredients
     }
     
