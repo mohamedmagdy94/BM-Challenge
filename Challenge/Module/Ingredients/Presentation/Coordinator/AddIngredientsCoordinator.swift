@@ -6,7 +6,28 @@
 //
 
 import Foundation
+import UIKit
+import Rswift
 
-protocol AddIngredientsCoordinating{
+
+protocol AddIngredientsCoordinating: Coordinating{
     func analyzeText(with service: ExtractingIngredients)
+}
+
+class AddIngredientsCoordinator: AddIngredientsCoordinating{
+    var navigationContoller: UINavigationController
+    
+    init(navigationContoller: UINavigationController){
+        self.navigationContoller = navigationContoller
+    }
+    
+    func start() {
+        let storyboard = R.storyboard.ingredients
+        guard let view = storyboard.addIngredientsViewController() else{ return }
+        navigationContoller.pushViewController(view, animated: true)
+    }
+    
+    func analyzeText(with service: ExtractingIngredients) {
+        
+    }
 }
