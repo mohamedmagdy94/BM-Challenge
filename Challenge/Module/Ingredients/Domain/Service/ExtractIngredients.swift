@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ExtractingIngredients{
+    var ingredients: [Ingredient] {get}
     func extractIngredients(userInput: String)->[Ingredient]
 }
 

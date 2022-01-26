@@ -14,6 +14,7 @@ protocol AddIngredientUseCaseContract{
     var analyzeText: PublishSubject<Void>{get}
     var userInput: BehaviorSubject<String>{get}
     var ingredients: Observable<[Ingredient]>{get}
+    var extractIngredientsService: ExtractingIngredients {get}
 }
 
 class AddIngredientUseCase: AddIngredientUseCaseContract{
