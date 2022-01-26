@@ -20,6 +20,9 @@
 		D99E79C6279DBEF700FA5010 /* ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79C5279DBEF700FA5010 /* ChallengeUITests.swift */; };
 		D99E79C8279DBEF700FA5010 /* ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79C7279DBEF700FA5010 /* ChallengeUITestsLaunchTests.swift */; };
 		D99E79D6279DCC1C00FA5010 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79D5279DCC1C00FA5010 /* R.generated.swift */; };
+		D99E79DD279DCE3700FA5010 /* AddIngredientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79DC279DCE3700FA5010 /* AddIngredientUseCase.swift */; };
+		D99E79E0279DCF1700FA5010 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79DF279DCF1700FA5010 /* Ingredient.swift */; };
+		D99E79E3279DD1EB00FA5010 /* ExtractIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E79E2279DD1EB00FA5010 /* ExtractIngredients.swift */; };
 		E746B0993CF4340DBCA804F3 /* Pods_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DF58EA664B9209486646C /* Pods_ChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +67,10 @@
 		D99E79C1279DBEF700FA5010 /* ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99E79C5279DBEF700FA5010 /* ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITests.swift; sourceTree = "<group>"; };
 		D99E79C7279DBEF700FA5010 /* ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D99E79D5279DCC1C00FA5010 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		D99E79D5279DCC1C00FA5010 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Challenge/SupportingFiles/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		D99E79DC279DCE3700FA5010 /* AddIngredientUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientUseCase.swift; sourceTree = "<group>"; };
+		D99E79DF279DCF1700FA5010 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		D99E79E2279DD1EB00FA5010 /* ExtractIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractIngredients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,15 +149,8 @@
 		D99E79A0279DBEF400FA5010 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				D99E79D5279DCC1C00FA5010 /* R.generated.swift */,
-				D99E79A1279DBEF400FA5010 /* AppDelegate.swift */,
-				D99E79A3279DBEF400FA5010 /* SceneDelegate.swift */,
-				D99E79A5279DBEF400FA5010 /* ViewController.swift */,
-				D99E79A7279DBEF400FA5010 /* Main.storyboard */,
-				D99E79AD279DBEF700FA5010 /* Assets.xcassets */,
-				D99E79AF279DBEF700FA5010 /* LaunchScreen.storyboard */,
-				D99E79B2279DBEF700FA5010 /* Info.plist */,
-				D99E79AA279DBEF400FA5010 /* Challenge.xcdatamodeld */,
+				D99E79D8279DCCBB00FA5010 /* SupportingFiles */,
+				D99E79D7279DCCAE00FA5010 /* Module */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -171,6 +170,72 @@
 				D99E79C7279DBEF700FA5010 /* ChallengeUITestsLaunchTests.swift */,
 			);
 			path = ChallengeUITests;
+			sourceTree = "<group>";
+		};
+		D99E79D7279DCCAE00FA5010 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79D9279DCCD200FA5010 /* Ingredients */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		D99E79D8279DCCBB00FA5010 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79D5279DCC1C00FA5010 /* R.generated.swift */,
+				D99E79A1279DBEF400FA5010 /* AppDelegate.swift */,
+				D99E79A3279DBEF400FA5010 /* SceneDelegate.swift */,
+				D99E79A5279DBEF400FA5010 /* ViewController.swift */,
+				D99E79A7279DBEF400FA5010 /* Main.storyboard */,
+				D99E79AD279DBEF700FA5010 /* Assets.xcassets */,
+				D99E79AF279DBEF700FA5010 /* LaunchScreen.storyboard */,
+				D99E79B2279DBEF700FA5010 /* Info.plist */,
+				D99E79AA279DBEF400FA5010 /* Challenge.xcdatamodeld */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D99E79D9279DCCD200FA5010 /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79DA279DCD1C00FA5010 /* Domain */,
+			);
+			path = Ingredients;
+			sourceTree = "<group>";
+		};
+		D99E79DA279DCD1C00FA5010 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79E1279DD18700FA5010 /* Service */,
+				D99E79DE279DCF0300FA5010 /* Entity */,
+				D99E79DB279DCE2600FA5010 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D99E79DB279DCE2600FA5010 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79DC279DCE3700FA5010 /* AddIngredientUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		D99E79DE279DCF0300FA5010 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79DF279DCF1700FA5010 /* Ingredient.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D99E79E1279DD18700FA5010 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D99E79E2279DD1EB00FA5010 /* ExtractIngredients.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,7 +517,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99E79DD279DCE3700FA5010 /* AddIngredientUseCase.swift in Sources */,
 				D99E79A6279DBEF400FA5010 /* ViewController.swift in Sources */,
+				D99E79E3279DD1EB00FA5010 /* ExtractIngredients.swift in Sources */,
+				D99E79E0279DCF1700FA5010 /* Ingredient.swift in Sources */,
 				D99E79AC279DBEF400FA5010 /* Challenge.xcdatamodeld in Sources */,
 				D99E79D6279DCC1C00FA5010 /* R.generated.swift in Sources */,
 				D99E79A2279DBEF400FA5010 /* AppDelegate.swift in Sources */,
@@ -637,7 +705,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Challenge/Info.plist;
+				INFOPLIST_FILE = Challenge/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -665,7 +733,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Challenge/Info.plist;
+				INFOPLIST_FILE = Challenge/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
