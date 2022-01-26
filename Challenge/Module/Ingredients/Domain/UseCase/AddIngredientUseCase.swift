@@ -22,20 +22,33 @@ class AddIngredientUseCase: AddIngredientUseCaseContract{
     var canAnalyzeText: Observable<Bool> { analyzeUserInput() }
     var analyzeText: PublishSubject<Void>
     var userInput: BehaviorSubject<String>
+    var extractIngredientsService: ExtractingIngredients
     private var ingredientsSubject: BehaviorSubject<[Ingredient]>
     
-    init(){
+    init(extractIngredientsService: ExtractingIngredients){
         analyzeText = PublishSubject()
         userInput = BehaviorSubject(value: "")
         ingredientsSubject = BehaviorSubject(value: [])
+        self.extractIngredientsService = extractIngredientsService
     }
     
     private func getIngredientsFromUserInput()->Observable<[Ingredient]>{
-        return Observable.empty()
+        let observable = userInput
+            .asObservable()
+            .map(extractIngredientsService.extractIngredients(userInput:))
+        return observable
     }
     
     private func analyzeUserInput()->Observable<Bool>{
-        return Observable.empty()
+        let observable = userInput
+            .asObservable()
+            .map(extractIngredientsService.extractIngredients(userInput:))
+            .map(canAnalyzeText)
+        return observable
+    }
+    
+    private func canAnalyzeText(ingredients: [Ingredient])->Bool{
+        return ingredients.count > 0
     }
     
 }
