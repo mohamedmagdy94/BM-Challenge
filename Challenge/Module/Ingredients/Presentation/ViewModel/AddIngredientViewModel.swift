@@ -24,7 +24,7 @@ class AddIngredientViewModel: AddIngredientViewModelContract{
     private var navigatonCoordinator: AddIngredientsCoordinating
     private var disposeBag: DisposeBag = DisposeBag()
     
-    init( addIngredientsUseCase: AddIngredientUseCaseContract,navigatonCoordinator: AddIngredientsCoordinating) {
+    init(addIngredientsUseCase: AddIngredientUseCaseContract,navigatonCoordinator: AddIngredientsCoordinating) {
         self.userInput = BehaviorSubject(value: "")
         self.addIngredientsUseCase = addIngredientsUseCase
         self.navigatonCoordinator = navigatonCoordinator
