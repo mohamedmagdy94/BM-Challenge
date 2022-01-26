@@ -22,7 +22,6 @@ class ExtractIngredientsTests: XCTestCase {
         let userInput = "1 cup rice,\n3 cup water"
         let service = ExtractIngredients(ingredientsDelimeter: ",", ingredientDelimeter: " ")
         let ingredients = service.extractIngredients(userInput: userInput)
-        print("Ingredients : \(ingredients)")
         XCTAssertTrue(ingredients.count == 2)
     }
 
