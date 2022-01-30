@@ -41,8 +41,8 @@ class AddIngredientViewModel: AddIngredientViewModelContract{
     }
     
     private func analyzeInput(){
-        let service = addIngredientsUseCase.extractIngredientsService
-        navigatonCoordinator.analyzeText(with: service)
+        let userInput = addIngredientsUseCase.extractIngredientsService.ingredients
+        navigatonCoordinator.analyzeText(with: userInput)
     }
     
     private func observeUserInput(){

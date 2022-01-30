@@ -7,11 +7,9 @@
 
 import Foundation
 import UIKit
-import Rswift
-
 
 protocol AddIngredientsCoordinating: Coordinating{
-    func analyzeText(with service: ExtractingIngredients)
+    func analyzeText(with ingredients: [Ingredient])
 }
 
 class AddIngredientsCoordinator: AddIngredientsCoordinating{
@@ -29,7 +27,8 @@ class AddIngredientsCoordinator: AddIngredientsCoordinating{
         navigationContoller.pushViewController(configuredView, animated: true)
     }
     
-    func analyzeText(with service: ExtractingIngredients) {
-        
+    func analyzeText(with ingredients: [Ingredient]) {
+        let nextViewCoorindator = IngredientDetailsCoordinator(navigationContoller: navigationContoller, userInput: ingredients)
+        nextViewCoorindator.start()
     }
 }
