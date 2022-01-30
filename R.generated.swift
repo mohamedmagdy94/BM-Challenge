@@ -193,6 +193,34 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `IngredientTableViewCell`.
+    static let ingredientTableViewCell = _R.nib._IngredientTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "IngredientTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ingredientTableViewCell) instead")
+    static func ingredientTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ingredientTableViewCell)
+    }
+    #endif
+
+    static func ingredientTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> IngredientTableViewCell? {
+      return R.nib.ingredientTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IngredientTableViewCell
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `INGREDIENT`.
+    static let ingredienT: Rswift.ReuseIdentifier<IngredientTableViewCell> = Rswift.ReuseIdentifier(identifier: "INGREDIENT")
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -214,6 +242,26 @@ struct _R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _IngredientTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = IngredientTableViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "INGREDIENT"
+      let name = "IngredientTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> IngredientTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IngredientTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
+
+  #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
@@ -233,16 +281,22 @@ struct _R: Rswift.Validatable {
 
       let addIngredientsViewController = StoryboardViewControllerResource<AddIngredientsViewController>(identifier: "AddIngredientsViewController")
       let bundle = R.hostingBundle
+      let ingredientDetailsViewController = StoryboardViewControllerResource<IngredientDetailsViewController>(identifier: "IngredientDetailsViewController")
       let name = "Ingredients"
 
       func addIngredientsViewController(_: Void = ()) -> AddIngredientsViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: addIngredientsViewController)
       }
 
+      func ingredientDetailsViewController(_: Void = ()) -> IngredientDetailsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: ingredientDetailsViewController)
+      }
+
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.ingredients().addIngredientsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'addIngredientsViewController' could not be loaded from storyboard 'Ingredients' as 'AddIngredientsViewController'.") }
+        if _R.storyboard.ingredients().ingredientDetailsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ingredientDetailsViewController' could not be loaded from storyboard 'Ingredients' as 'IngredientDetailsViewController'.") }
       }
 
       fileprivate init() {}
