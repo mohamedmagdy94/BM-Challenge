@@ -46,6 +46,7 @@ class AddIngredientsViewController: UIViewController {
             .canAnalyzeText
             .bind(to: analyzeButton.rx.isEnabled)
             .disposed(by: disposeBag)
+        
     }
     
     private func setupViews(){

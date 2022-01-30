@@ -8,6 +8,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Ingredient Details View Controller-->
+        <scene sceneID="jWF-nG-aDd">
+            <objects>
+                <viewController storyboardIdentifier="IngredientDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NZ1-od-srO" customClass="IngredientDetailsViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTQ-ri-qh6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="l56-3d-bfb">
+                                <rect key="frame" x="24" y="68" width="366" height="746"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QjS-4M-gGS" userLabel="ingredients">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="651"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="INGREDIENT" id="2oh-xy-I01" customClass="IngredientTableViewCell" customModule="Challenge" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.5" width="366" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2oh-xy-I01" id="sA1-ji-rHc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-u8-qQn" userLabel="totalAnalysis">
+                                        <rect key="frame" x="0.0" y="715" width="366" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Total Analysis"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="FDt-ze-avP">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v4Z-nw-oZD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l56-3d-bfb" firstAttribute="leading" secondItem="v4Z-nw-oZD" secondAttribute="leading" constant="24" id="4F2-bc-Xeq"/>
+                            <constraint firstItem="FDt-ze-avP" firstAttribute="centerY" secondItem="uTQ-ri-qh6" secondAttribute="centerY" id="Eo1-Ce-pxL"/>
+                            <constraint firstItem="l56-3d-bfb" firstAttribute="top" secondItem="v4Z-nw-oZD" secondAttribute="top" constant="24" id="mcN-Pp-pbU"/>
+                            <constraint firstItem="FDt-ze-avP" firstAttribute="centerX" secondItem="uTQ-ri-qh6" secondAttribute="centerX" id="n0p-IH-9vl"/>
+                            <constraint firstItem="v4Z-nw-oZD" firstAttribute="trailing" secondItem="l56-3d-bfb" secondAttribute="trailing" constant="24" id="pOg-Gj-lkk"/>
+                            <constraint firstItem="v4Z-nw-oZD" firstAttribute="bottom" secondItem="l56-3d-bfb" secondAttribute="bottom" constant="48" id="xYr-rr-kbN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ingredientsTable" destination="QjS-4M-gGS" id="dlQ-kQ-XbA"/>
+                        <outlet property="loadingIndicator" destination="FDt-ze-avP" id="FnC-8o-ly0"/>
+                        <outlet property="totalAnalysisButton" destination="iLf-u8-qQn" id="MEJ-bU-ywt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biC-g0-m7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="118"/>
+        </scene>
         <!--Add Ingredients View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>

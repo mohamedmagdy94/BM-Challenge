@@ -49,7 +49,7 @@ class ExtractIngredients: ExtractingIngredients{
         guard ingredientComponents.count == 3 else{ return nil }
         let ingredientName = ingredientComponents[0]
         let ingredientQuantity = Int(ingredientComponents[1]) ?? 0
-        let ingredientUnit = ingredientComponents[1]
+        let ingredientUnit = ingredientComponents[2]
         let ingredient = Ingredient(name: ingredientName, quantity: ingredientQuantity, unit: ingredientUnit)
         return ingredient
     }

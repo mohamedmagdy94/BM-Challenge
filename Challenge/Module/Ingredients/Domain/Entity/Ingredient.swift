@@ -11,4 +11,5 @@ struct Ingredient{
     var name: String
     var quantity: Int
     var unit: String
+    var details: IngredientDetails?
 }
